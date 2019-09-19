@@ -1,0 +1,108 @@
+[02-Feb-2019 12:52:01 America/Chicago] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'DirectoryIterator::__construct(/home3/sylvangr/public_html/suite.social/login/whatsapp/plugins): failed to open dir: No such file or directory' in /home3/sylvangr/public_html/suite.social/login/whatsapp/src/pluginreader.php:88
+Stack trace:
+#0 /home3/sylvangr/public_html/suite.social/login/whatsapp/src/pluginreader.php(88): DirectoryIterator->__construct('/home3/sylvangr...')
+#1 /home3/sylvangr/public_html/suite.social/login/whatsapp/header-admin.php(29): pluginReader->getAllPlugins()
+#2 /home3/sylvangr/public_html/suite.social/login/whatsapp/admin.php(7): require_once('/home3/sylvangr...')
+#3 {main}
+  thrown in /home3/sylvangr/public_html/suite.social/login/whatsapp/src/pluginreader.php on line 88
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[03-Feb-2019 15:03:03 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[05-Feb-2019 11:43:55 America/Chicago] PHP Fatal error:  Call to undefined function getSession() in /home3/sylvangr/public_html/suite.social/whatsapp/header-admin.php on line 726
+[05-Feb-2019 11:49:07 America/Chicago] PHP Fatal error:  Call to undefined function getSession() in /home3/sylvangr/public_html/suite.social/whatsapp/header-admin.php on line 726
+[05-Feb-2019 11:49:41 America/Chicago] PHP Fatal error:  Call to undefined function getSession() in /home3/sylvangr/public_html/suite.social/whatsapp/header-admin.php on line 726
+[13-Feb-2019 14:29:40 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[09-Apr-2019 05:32:05 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:32:46 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:38:00 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[09-Apr-2019 05:43:27 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[09-Apr-2019 05:43:33 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[25-Apr-2019 10:37:57 America/Chicago] PHP Notice:  Undefined variable: info in /home3/sylvangr/public_html/suite.social/whatsapp/users.php on line 163
+[25-Apr-2019 10:37:57 America/Chicago] PHP Notice:  Undefined variable: info in /home3/sylvangr/public_html/suite.social/whatsapp/users.php on line 163
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[06-May-2019 09:55:56 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[06-May-2019 10:06:26 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[06-May-2019 10:06:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[18-May-2019 10:32:56 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[18-May-2019 10:37:10 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[18-May-2019 11:09:11 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[19-May-2019 04:15:24 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[19-May-2019 04:15:25 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[19-May-2019 13:57:10 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[19-May-2019 18:49:36 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[19-May-2019 19:36:56 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[21-May-2019 02:46:27 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[21-May-2019 09:39:18 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[21-May-2019 10:02:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[21-May-2019 19:37:16 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[22-May-2019 06:57:46 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[23-May-2019 08:55:19 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[23-May-2019 19:35:07 Asia/Kolkata] PHP Warning:  Division by zero in /home3/sylvangr/public_html/suite.social/whatsapp/message_action.php on line 59
+[24-May-2019 13:40:41 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[24-May-2019 13:54:52 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[25-May-2019 06:49:42 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home3/sylvangr/public_html/suite.social/whatsapp/send.php on line 33
+[15-Jun-2019 17:50:25 Asia/Kolkata] PHP Warning:  Division by zero in /home3/sylvangr/public_html/suite.social/whatsapp/message_action.php on line 59
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: headline in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 61
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: image in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 62
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: network in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 63
+[17-Jun-2019 12:53:22 America/Chicago] PHP Notice:  Undefined index: description in /home3/sylvangr/public_html/suite.social/whatsapp/plugins.php on line 64
+[25-Jul-2019 11:58:30 America/Chicago] PHP Notice:  Undefined variable: twitter_follow_user_name in /home3/sylvangr/public_html/suite.social/whatsapp/demo.php on line 43
+[25-Jul-2019 11:58:30 America/Chicago] PHP Notice:  Undefined variable: instagram_follow_user_id in /home3/sylvangr/public_html/suite.social/whatsapp/demo.php on line 44
+[25-Jul-2019 11:58:30 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home3/sylvangr/public_html/suite.social/whatsapp/demo.php:43) in /home3/sylvangr/public_html/suite.social/whatsapp/demo.php on line 46
+[26-Jul-2019 17:03:20 America/Chicago] PHP Fatal error:  Uncaught exception 'UnexpectedValueException' with message 'DirectoryIterator::__construct(/home3/sylvangr/public_html/suite.social/whatsapp/plugins): failed to open dir: No such file or directory' in /home3/sylvangr/public_html/suite.social/whatsapp/src/pluginreader.php:88
+Stack trace:
+#0 /home3/sylvangr/public_html/suite.social/whatsapp/src/pluginreader.php(88): DirectoryIterator->__construct('/home3/sylvangr...')
+#1 /home3/sylvangr/public_html/suite.social/whatsapp/header-admin.php(29): pluginReader->getAllPlugins()
+#2 /home3/sylvangr/public_html/suite.social/whatsapp/admin.php(2): require_once('/home3/sylvangr...')
+#3 {main}
+  thrown in /home3/sylvangr/public_html/suite.social/whatsapp/src/pluginreader.php on line 88

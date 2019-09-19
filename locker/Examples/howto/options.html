@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Creating Facebook App</title>
+
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/jquery.ui.highlight.min.js"></script>
+
+    <script src="../js/jquery.sortable.min.js"></script>
+    <script src="../js/highlight.min.js"></script>
+    <script src="../js/wizard.js"></script>
+    
+    <script src="../js/pandalocker.2.3.1.js?6"></script>
+    <link type="text/css" rel="stylesheet" href="../css/pandalocker.2.3.1.min.css" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/default.min.css" rel="stylesheet" type="text/css"/>    
+    <link href="../css/docs.css" rel="stylesheet" type="text/css"/>    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <style>
+        .table, 
+        .table tr:first-child, 
+        .table tr:first-child td {
+            border-top: 0px;
+        }
+        .option-name {
+            font-weight: bold;
+        }    
+        .option-meta {
+            color: #a1a1a1;
+            display: block;
+            margin-top: 4px;
+        }
+        .option-meta + .option-meta {
+            margin-top: 0px;
+        }
+        .option-example {
+            margin-top: 10px;
+        }
+        .option-example strong {
+            color: #a1a1a1;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+    </style>
+    
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+    
+        <div class="onp-help-nav">
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../index.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>1. Configuration Wizard</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems onp-help-active-item">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../howto/options.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>2. Options</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="facebook-app.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>3. Creating Social Apps</span>
+                    </a>
+
+                    <div class="onp-help-nav-subitems">
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-facebook-app ">
+                            <div class="onp-inner-wrap">
+
+                                <a href="facebook-app.html">
+                                    <span>Creating Facebook App</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-google-client-id">
+                            <div class="onp-inner-wrap">
+                    
+                                <a href="google-app.html">
+                                    <span>Getting Google Client ID</span>
+                                </a>
+  
+                            </div>
+                        </div>
+                        
+                    </div>
+                                        
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="events.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>4. Using Events</span>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="ajax.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>5. Using Ajax</span>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-troubleshooting">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="http://support.onepress-media.com/create-ticket/">
+                        <span>6. Troubleshooting</span>
+                    </a>
+                
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="onp-help-content">
+            <div class="onp-inner-wrap">
+                
+                <div class="onp-help-section">
+                    <h1>Options</h1>
+                    <p>Below are a full list of available options.</p>
+                </div>
+
+                <div class="onp-help-section">
+
+                    <table class="table table-condensed">
+                        
+                        <!-- text.header -->
+                        <tr>
+                            <td>
+                                <span class="option-name">text.header</span><br />
+                                <span class="option-meta">type: <span class="value">string/html</span></span>
+                                <span class="option-meta">default: <span class="value">null</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines the header of the locker.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+<pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    text: {
+        header: "This content is locked!"
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- text.message -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">text.message</span><br />
+                                <span class="option-meta">type: <span class="value">string/html</span></span>
+                                <span class="option-meta">default: <span class="value">null</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines the message below the header.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    text: {
+        message: "Please support us, share this page to unlock this content."
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- content -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">content</span><br />
+                                <span class="option-meta">type: <span class="value">string/html</span></span>
+                                <span class="option-meta">default: <span class="value">null</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines the content which has to be visible after unlock. By default, the CSS selector is used to pick the content to lock.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">
+$(".to-lock").sociallocker(function(){
+    content: "My locked content"
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- theme -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">theme</span><br />
+                                <span class="option-meta">type: <span class="value">string</span></span>
+                                <span class="option-meta">default: <span class="value">'default'</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines a theme of your locker. Possible values: default, secrets, flat, dandyish, glass.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    theme: "flat"
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- cssClass -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">cssClass</span><br />
+                                <span class="option-meta">type: <span class="value">string</span></span>
+                                <span class="option-meta">default: <span class="value">null</span></span>
+                            </td>
+                            <td>
+                                Optional. Additional CSS class added to the locker element.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    cssClass: "my-class"
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- lang -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">lang</span><br />
+                                <span class="option-meta">type: <span class="value">string</span></span>
+                                <span class="option-meta">default: <span class="value">'en_US'</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines a language of social buttons. See the full list of supported languages here: 
+                                <a href="https://www.facebook.com/translations/FacebookLocales.xml" target="_blank">https://www.facebook.com/translations/FacebookLocales.xml</a>
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    lang: "de_DE"
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- buttons.order -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">buttons.order</span><br />
+                                <span class="option-meta">type: <span class="value">array</span></span>
+                                <span class="option-meta">default: <span class="value">["facebook-like", "twitter-tweet", "google-plus"]</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines an order of social buttons available to unlock content. 
+                                Possible values: twitter-tweet, twitter-follow, facebook-like, facebook-share,
+                                google-plus, google-share, linkedin-share, youtube-subscribe.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    buttons: {
+        order: ["facebook-like", "twitter-tweet", "google-plus"]
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>      
+                        
+                        <!-- buttons.counters -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">buttons.counters</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">true</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, displays counters for social buttons (Tweet button doesn't have a counter).
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    buttons: {
+        counters: true
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>   
+                        
+                        <!-- buttons.lazy -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">buttons.lazy</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>      
+                            </td>
+                            <td>
+                                Optional. If true, social buttons are loaded only at the moment when the locker gets visible on the screen (for better performance).
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    buttons: {
+        lazy: true
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- overlap.mode -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">overlap.mode</span><br />
+                                <span class="option-meta">type: <span class="value">string</span></span>
+                                <span class="option-meta">default: <span class="value">'full'</span></span>
+                            </td>
+                            <td>
+                                Optional. Choose the way how your locker must lock your content. 
+                                The blurring mode works in all browsers except IE 10-11 (In IE 10-11, the transparency mode will be applied).
+                                Possible values: full, transparence, blurring.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    overlap: {
+        mode: 'blurring'
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- overlap.position -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">overlap.position</span><br />
+                                <span class="option-meta">type: <span class="value">string</span></span>
+                                <span class="option-meta">default: <span class="value">'top'</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines the position of the locker if the mode 'transparence' or 'blurring' set.
+                                Possible values: middle, top, scroll.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    overlap: {
+        position: 'middle'
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>  
+                        
+                        <!-- overlap.intensity -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">overlap.intensity</span><br />
+                                <span class="option-meta">type: <span class="value">integer</span></span>
+                                <span class="option-meta">default: <span class="value">5</span></span>
+                            </td>
+                            <td>
+                                Optional. Defines the overlap intensity for the blurring mode (from 0 to 10).
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    overlap: {
+        intensity: 8
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>  
+                        
+                        <!-- demo -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">demo</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, the locker will appear always even if it was already unlocked.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    demo: true
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- highlight -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">highlight</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">true</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, runs the highlight effect when the content is unlocked. By default, true.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    highlight: true
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- googleAnalytics -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">googleAnalytics</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, the plugin will generate <a href="https://support.google.com/analytics/answer/1033068?hl=en" target="_blank">events</a> for the Google Analytics when the content is unlocked.
+                                Note: before enabling this feature, please <a href="https://support.google.com/analytics/answer/1008015?hl=en" target="_blank">make sure</a> that your website contains the Google Analytics tracker code.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    googleAnalytics: true
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>  
+                        
+                        <!-- locker.close -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">locker.close</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, shows the Close Icon in the corner.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    locker: {
+        close: true
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- locker.timer -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">locker.timer</span><br />
+                                <span class="option-meta">type: <span class="value">bool/integer</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. Sets a countdown interval for the locker in seconds.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    locker: {
+        timer: 60
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- locker.mobile -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">locker.mobile</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">true</span></span>
+                            </td>
+                            <td>
+                                Optional. If true, shows the locker on mobile decices. By default, true.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    locker: {
+        mobile: false
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- locker.useCookies -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">locker.useCookies</span><br />
+                                <span class="option-meta">type: <span class="value">bool</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. Forces to use cookies instead of the Local Storage.
+                                <div class="option-example">
+                                    <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    locker: {
+        useCookies: true
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <!-- locker.scope -->           
+                        <tr>
+                            <td>
+                                <span class="option-name">locker.scope</span><br />
+                                <span class="option-meta">type: <span class="value">bool/string</span></span>
+                                <span class="option-meta">default: <span class="value">false</span></span>
+                            </td>
+                            <td>
+                                Optional. Allows to bind lockers into one group. 
+                                If one of lockers in the given scope are unlocked, all others will be unlocked too.
+                                <div class="option-example">
+                                <strong>Example: </strong>
+ <pre><code class="javascript">$(".to-lock").sociallocker(function(){
+    locker: {
+        scope: "mygroup"
+    }
+});</code></pre>
+                                </div>
+                            </td>
+                        </tr>   
+                        
+                    </table>
+                </div>
+                
+            </div>        
+        </div> 
+
+
+                
+        <div style="padding: 20px 0 20px 210px;">
+            OnePress (c) 2017. Learn more about <a href="http://codecanyon.net/item/social-locker-for-jquery/3408941?ref=OnePress" target="_blank" class="text-primary"><strong>Social Locker for jQuery</strong></a>.
+        </div>
+
+    </div>
+
+</body>
+</html>

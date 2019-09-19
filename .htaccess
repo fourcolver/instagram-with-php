@@ -1,0 +1,47 @@
+<IfModule mod_security.c>
+  SecFilterEngine Off
+  SecFilterScanPOST Off
+</IfModule>
+
+<FilesMatch "admin.php">
+AuthName "Member Only"
+AuthType Basic
+AuthUserFile /home3/sylvangr/.htpasswd
+require valid-user
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+# Use PHP 5.4
+# Use PHP54 as default
+#AddHandler application/x-httpd-php54 .php
+#<IfModule mod_suphp.c>
+#    suPHP_ConfigPath /opt/php54/lib
+#</IfModule>
+
+RewriteEngine on
+
+# For .php & .html URL's:
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+RewriteRule index/(.*)/ offer.php?type=$1
+RewriteRule index/(.*) offer.php?type=$1
+
+# Redirect Trailing Slashes If Not A Folder...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Handle Front Controller...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ offer.php [L]
+
+# Handle Authorization Header
+RewriteCond %{HTTP:Authorization} .
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Using Events</title>
+
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/jquery.ui.highlight.min.js"></script>
+
+    <script src="../js/jquery.sortable.min.js"></script>
+    <script src="../js/highlight.min.js"></script>
+    <script src="../js/wizard.js"></script>
+
+    <script src="../js/pandalocker.2.3.1.js"></script>
+    <link type="text/css" rel="stylesheet" href="../css/pandalocker.2.3.1.min.css" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/default.min.css" rel="stylesheet" type="text/css"/>    
+    <link href="../css/docs.css" rel="stylesheet" type="text/css"/>
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+  <script>
+
+    // IMPORTANT: this is an obligatory wrapper, it runs after loading a page
+    jQuery(document).ready(function ($) {
+        
+        // IMPORTANT: put handlers for events before creating the locker        
+        
+        // - locked
+        $.pandalocker.hooks.add( 'opanda-lock', function(e, locker, sender){
+            alert('The content was locked!');
+        });
+        
+        // - unlocked
+        $.pandalocker.hooks.add( 'opanda-unlock', function(e, locker, sender){
+            alert('The content was unlocked via: ' + sender + "!");
+        });
+        
+        // - canceled: happens when the user already unlocked 
+        // content and visits your page again
+        $.pandalocker.hooks.add( 'opanda-cancel', function(e, locker, sender){
+            alert('Locking of content was canceled!');
+        });
+        
+        $(".to-lock").sociallocker({
+            demo: true,
+            
+            locker: {
+                timer: 30,
+                close: true
+            }
+        });
+    });
+  </script>
+</head>
+<body>
+    <div class="wrap">
+    
+        <div class="onp-help-nav">
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../index.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>1. Configuration Wizard</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../howto/options.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>2. Options</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="facebook-app.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>3. Creating Social Apps</span>
+                    </a>
+
+                    <div class="onp-help-nav-subitems">
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-facebook-app">
+                            <div class="onp-inner-wrap">
+
+                                <a href="facebook-app.html">
+                                    <span>Creating Facebook App</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-google-client-id">
+                            <div class="onp-inner-wrap">
+                    
+                                <a href="google-app.html">
+                                    <span>Getting Google Client ID</span>
+                                </a>
+  
+                            </div>
+                        </div>
+                        
+                    </div>
+                                        
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems onp-help-active-item">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="events.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>4. Using Events</span>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="ajax.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>5. Using Ajax</span>
+                    </a>
+                    
+                </div>
+            </div>
+
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-troubleshooting">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="http://support.onepress-media.com/create-ticket/">
+                        <span>6. Troubleshooting</span>
+                    </a>
+                
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="onp-help-content">
+            <div class="onp-inner-wrap">
+                
+                <div class="onp-help-section">
+                    <h1>Using Events</h1>
+                    <div>
+                        <p>You can use a wide range of events to add custom code. Available events:</p>
+                        <ul>
+                            <li><strong>Locked</strong> - fires when content is locked.</li>
+                            <li><strong>Unlocked</strong> - fires when content is unlocked.</li>
+                            <li><strong>Canceled</strong> - fires when locking of content is canceled.</li>                     
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="onp-help-section">
+                    <p><strong>Live Example:</strong></p>
+                    <section class="example">
+                        <p class="to-lock" style="display: none;">[locked content goes here]</p>  
+                    </section>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p><strong>Code:</strong></p>
+<pre><code class="javascript">// IMPORTANT: put handlers for events before creating the locker        
+
+// - locked
+
+$.pandalocker.hooks.add( 'opanda-lock', function(e, locker, sender){
+    alert('The content was locked!');
+});
+
+// - unlocked
+
+$.pandalocker.hooks.add( 'opanda-unlock', function(e, locker, sender){
+    alert('The content was unlocked via: ' + sender + "!");
+});
+
+// - canceled
+// happens when the user already unlocked content and visits your page again
+
+$.pandalocker.hooks.add( 'opanda-cancel', function(e, locker, sender){
+    alert('Locking of content was canceled!');
+});
+
+$(".to-lock").sociallocker({
+    locker: { timer: 30, close: true }
+});</code></pre>
+                </div>
+
+            </div>
+        </div> 
+        
+        <div style="padding: 20px 0 20px 210px;">
+            OnePress (c) 2017. Learn more about <a href="http://codecanyon.net/item/social-locker-for-jquery/3408941?ref=OnePress" target="_blank" class="text-primary"><strong>Social Locker for jQuery</strong></a>.
+        </div>
+        
+    </div>
+    
+</body>
+</html>
+
+<body

@@ -1,0 +1,218 @@
+v.2.3.1 - 21 Jan 2018
+
+IMPROVED: Facebook Share button (works better on mobile).
+IMPROVED: Facebook Like button (includes support for the confirmation dialog).
+
+------------------------------------------------------------------
+
+v.2.2.5 - 21 Aug 2017
+
+FIXED:    The Google Buttons issue caused with the recent Google updates.
+FIXED:    Minor bugs.
+
+------------------------------------------------------------------
+
+v.2.1.0 - 22 Jun 2016
+
+FIXED:    The bug when the user was able to unlock the content 
+          by clicking on button Cancel when sharing via Facebook.
+
+------------------------------------------------------------------
+
+v.2.0.7 - 29 Mar 2016
+
+FIXED:    Facebook Buttons.
+
+------------------------------------------------------------------
+
+v.2.0.5 - 05 Mar 2016
+
+FIXED:    Facebook Share button.
+
+------------------------------------------------------------------
+
+v.2.0.0 - 12 Jan 2016
+
+NEW:      Added Configuration Wizard.
+NEW:      Added a new option "Lazy Loading" to load social buttons only 
+          at the moment when the locker gets visible (for better performance).
+NEW:      Added YouTube Subscribe button.
+FIXED:    Tweet and Follow buttons.
+FIXED:    Google Share button.
+
+Please note: names of CSS classes of the locker were changed ('onp-sociallocker' -> 'onp-sl') as well as names of plugin files ('jquery.onp.sociallocker.*.min.js -> 'pandalocker.*.min.js).
+
+------------------------------------------------------------------
+
+v.1.8.0 - 30 Nov 2015
+
+FIXED:    Tweet and Follow buttons.
+FIXED:    Google Share button.
+
+------------------------------------------------------------------
+
+v.1.8.0 - 30 Nov 2015
+
+FIXED:    Tweet and Follow buttons.
+FIXED:    Google Share button.
+
+------------------------------------------------------------------
+
+v.1.7.9 - 30 Jul 2015
+
+FIXED:    Minor bugs.
+
+------------------------------------------------------------------
+
+
+v.1.7.6 - 11 Sep 2014
+
+FIXED:    IE10+ and Twiter Button issue.
+FIXED:    The LinkedIn Button issue.
+FIXED:    The the z-index issue of the button covers.
+
+------------------------------------------------------------------
+
+v.1.6.7 - 30 Jun 2014
+
+FIXED:    Minor CSS issues.
+FIXED:    The IE11 and Tweet button issue.
+
+------------------------------------------------------------------
+
+v.1.6.2 - 13 Jun 2014
+
+NEW:      The long-awaited option to overlap content and make it transparent or blurred.
+IMPROVED: Support for Czech language.
+
+------------------------------------------------------------------
+
+v.1.5.9 - 19 May 2014
+
+FIXED:    The LinkedIn Share button issue.
+
+------------------------------------------------------------------
+
+v.1.5.8 - 14 May 2014
+
+FIXED:    The Facebook Share button issue.
+
+------------------------------------------------------------------
+
+v.1.5.7 - 13 May 2014
+
+IMPROVED:  Better support for Portuguese language.
+FIXED:     The QuotaExceededError issue.
+
+------------------------------------------------------------------
+
+v.1.5.6 - 12 May 2014
+
+IMPROVED:  Detecting some browser extensions like Avast, PrivDog, AdBlock 
+           and others which can block social networks and break the locker. If these
+           extensions are detected, the plugin notifies the user about that and offers to turn them off.
+IMPROVED:  Better support for German language.
+IMPROVED:  Added preloaders when the social buttons are loaded.
+
+------------------------------------------------------------------
+
+v.1.5.5 - 9 May 2014
+
+FIXED:     The issue of the confirmation dialog of the Like button.
+FIXED:     The issue of the Google +1 button when the locker doesn't reveal content for some locker configurations.
+IMPROVED:  The CSS of the locker for better compatible with the most sites by default.
+
+------------------------------------------------------------------
+
+v.1.5.3 - 23 Apr 2014
+
+FIXED:     A minor issue of the Like button, when after a like, the message "say something..." appears without unlocking.
+FIXED:     The issue of the IE10 and the Tweet button.
+
+------------------------------------------------------------------
+
+v.1.5.2 - 31 Mar 2014
+
+FIXED:     The IE8 issue.
+
+------------------------------------------------------------------
+
+v.1.5.1 - 25 Mar 2014
+
+FIXED:     The HTML and CSS structure of the Secrets theme was simplified. From now, it’s possible to change the color of the covers of the social buttons via CSS.
+
+------------------------------------------------------------------
+
+v.1.5.0 - 13 Mar 2014
+NEW:       Added the Flat theme.   
+FIXED:     A bug when the counter of the Like button is still visible on mobile 
+           devices even if the Counter option is set to OFF.
+FIXED:     The issue of the box-sizing css rule for some websites.
+
+------------------------------------------------------------------
+
+v.1.4.3 - 25 Feb 2014
+FIXED:    Shifting of the Facebook Like button.
+FIXED:    The bug of the trimmed social buttons on Polish and Spanish sites.
+
+------------------------------------------------------------------
+
+v.1.4.1 - 2 Jan 2014
+IMPROVED: Unlocking content after clicking the Like button get more quickly.
+FIXED:    A minor bug of vertical alignment of the Facebook Share button.
+
+------------------------------------------------------------------
+
+v.1.4.0 - 30 Dec 2013
+IMPROVED: Images were merged into a sprite. An image sprite is a collection of images 
+          put into a single image. Using image sprites reduces the number of server 
+          requests and saves bandwidth.
+IMPROVED: Facebook Share button was updated and became localizable.
+IMPROVED: Better support for IE 11.
+FIXED:    A bug when it was not possible to unlock content in IE 11.
+
+------------------------------------------------------------------
+
+v.1.3.2 - 31 Aug 2013
+FIXED:    A bug when the locker doesn't show content after liking because the URL for 
+          liking doesn't have a traling slash.
+
+------------------------------------------------------------------
+
+v.1.3.1 - 1 Mar 2013
+NEW:      A new button available: LinkedIn Share.
+
+------------------------------------------------------------------
+
+v.1.3.0 - 28 Feb 2013
+NEW:      New buttons available: Facebook Share, Twitter Follow, Google Share.
+          The Google Share button is experimental and doesn't appear in IE and Opera.
+NEW:      Support for jquery 1.9.0+ added.
+NEW:      New options 'title' was added. It allows to set a visible title of a button for
+          themes like 'Secrets'. Previously it required changing a button image.
+
+UPDATED:  The prefix for CSS clases "ui-social-locker-" was replaced with "onp-sociallocker-". 
+          Please don't forget to update your own locker themes if you have ones.
+UPDATED:  The locker function "socailLock" was replaced with "sociallocker".
+          But the "socailLock" is still supported. 
+
+FIXED:    A minor bug with rendering the Gogle Plus button, when the Secrets Theme 
+          is used, was fixed.
+
+------------------------------------------------------------------
+
+v.1.2.4 – 20 Jan 2013
+UPDATED:  Common improvements for mobile devices.
+
+------------------------------------------------------------------
+
+v.1.2.3 – 3 Jan 2012
+FIXED:    Twitter bugs fixed. 
+
+------------------------------------------------------------------
+
+v.1.2.2 – 29 Dec 2012
+UPDATED:  Support of touch screens improved.
+UPDATED:  The preset themes were made fully responsive.
+
+FIXED:    IE7 bug fixed. Beginning from now the locker will not appears for IE7 users.

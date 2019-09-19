@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Creating Facebook App</title>
+
+    <script src="../js/libs/jquery.min.js"></script>
+    <script src="../js/libs/jquery.ui.highlight.min.js"></script>
+
+    <script src="../js/jquery.sortable.min.js"></script>
+    <script src="../js/wizard.js"></script>
+
+    <script src="../js/pandalocker.2.3.1.js?6"></script>
+    <link type="text/css" rel="stylesheet" href="../css/pandalocker.2.3.1.min.css" />
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/docs.css" rel="stylesheet" type="text/css"/>    
+
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+    
+        <div class="onp-help-nav">
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../index.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>1. Configuration Wizard</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-sociallocker onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="../howto/options.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>2. Options</span>
+                    </a>
+                                       
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-help-active-item onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="facebook-app.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>3. Creating Social Apps</span>
+                    </a>
+
+                    <div class="onp-help-nav-subitems">
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-facebook-app onp-help-active-item">
+                            <div class="onp-inner-wrap">
+
+                                <a href="facebook-app.html">
+                                    <span>Creating Facebook App</span>
+                                </a>
+                                
+                            </div>
+                        </div>
+
+                        <div class="onp-help-nav-level onp-help-nav-level-1 onp-help-nav-page onp-help-google-client-id">
+                            <div class="onp-inner-wrap">
+                    
+                                <a href="google-app.html">
+                                    <span>Getting Google Client ID</span>
+                                </a>
+  
+                            </div>
+                        </div>
+                        
+                    </div>
+                                        
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="events.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>4. Using Events</span>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-social-apps onp-has-subitems">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="ajax.html">
+                        <i class="fa fa-plus-square-o"></i>
+                        <i class="fa fa-minus-square-o"></i>
+                        <span>5. Using Ajax</span>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="onp-help-nav-level onp-help-nav-level-0 onp-help-nav-category onp-help-troubleshooting">
+                <div class="onp-inner-wrap">
+                    
+                    <a href="http://support.onepress-media.com/create-ticket/">
+                        <span>6. Troubleshooting</span>
+                    </a>
+                
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="onp-help-content">
+            <div class="onp-inner-wrap">
+                
+                <div class="onp-help-section">
+                    <h1>Creating Facebook App</h1>
+
+                    <p>A Facebook App is required for the following buttons:</p>
+                    <ul>
+                        <li>Facebook Share</li>
+                    </ul>
+                    <p></p>
+                    <p>If you want to use these buttons, you need to register a Facebook App for your website. Otherwise you can use the default Facebook App Id (117100935120196).</p>
+                    <p>In other words, <strong>you don't need to create an own app</strong> if you're not going to use the Facebook Share.</p>
+                </div>
+
+                <div class="onp-help-section">
+                    <p>1. Open the website <a href="https://developers.facebook.com/" target="_blank">developers.facebook.com</a> and click "Add a New App" (you have to be logged in):</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/1.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>2. Type your app name (it will be visible for users), email address (for notifications from Facebook) and click "Create App ID":</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/2.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>3. Pass the security check if needed by typing the code displaying on the picture and clicking on "Submit":</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/3.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>4. Click "Settings" in the menu at the left:</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/4.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>5. Twice enter your site domain name: without "www" and with "www", check your email address, set the category and click "+ Add Platform":</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/5.png">
+                    </p>
+                </div>
+
+                <div class="onp-help-section">
+                    <p>6. Click "Website":</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/6.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>7. Specify an URL of your website and save the changes:</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/7.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>8. Move to the section "App Review":</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/8.png">
+                    </p>
+                </div>
+                
+                <div class="onp-help-section">
+                    <p>9. Make your app available to the general public:</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/9.png">
+                    </p>
+                </div>
+
+                <div class="onp-help-section">
+                    <p>10. Copy your app id:</p>
+                    <p class="onp-img">
+                        <img src="http://cconp.s3.amazonaws.com/bizpanda/facebook-app/v2/10.png">
+                    </p>
+                </div>
+
+                <div class="onp-help-section">
+                    <p>11. Put your new Facebook App ID in settings of your locker.</p>
+                </div>
+                    
+            </div>        
+        </div> 
+   
+        <div style="padding: 20px 0 20px 210px;">
+            OnePress (c) 2017. Learn more about <a href="http://codecanyon.net/item/social-locker-for-jquery/3408941?ref=OnePress" target="_blank" class="text-primary"><strong>Social Locker for jQuery</strong></a>.
+        </div>
+
+    </div>
+
+</body>
+</html>
